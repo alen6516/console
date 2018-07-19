@@ -6,6 +6,7 @@
 # Created Time: 2018-06-11
 #####
 
+# base cmd exception
 class CmdException(Exception):
     """ exception when user give a wrong para to a command """
 
@@ -13,7 +14,7 @@ class CmdException(Exception):
         super(CmdException, self).__init__()
         self.msg = msg
     
-
+# base cmd
 class Cmd(object):
         
     cmd_dict = {}
@@ -107,8 +108,7 @@ class Count(Cmd):
                 for i in range(num, 0, -1):
                     print(i)
                     time.sleep(1)
-                
-           
+                           
             except ValueError as e:
                 print("please give an integer")
 
